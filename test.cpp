@@ -35,11 +35,12 @@ int main()
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn = 1e5 + 7;
-int vis[maxn];
+int viss[maxn];
 int prime[100000+7];
 int flag = 1;
 void Prime(int a)
 {
+    int vis[maxn];
 	memset(vis, 0, sizeof(vis));
 	memset(prime, 0, sizeof(prime));
     int sum=0;
@@ -64,8 +65,8 @@ int main()
     Prime(n);
     for(int i=2;i<n;i++)
     {
-        printf("%d ",vis[i]);
+        printf("%d ",viss[i]);
     }
-    printf("%d\n",vis[n]);
+    printf("%d\n",viss[n]);
     return 0;
 }
